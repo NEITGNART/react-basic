@@ -1,13 +1,18 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Search from "./component/Search";
+
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import EmployeeHourReport from "./component/EmployeeHourReport";
 
 const App = () => {
     return (
-        <>
-            <Search/>
-        </>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<EmployeeHourReport/>}></Route>
+            </Routes>
+        </BrowserRouter>
+
+
     );
 };
 
